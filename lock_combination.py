@@ -16,7 +16,7 @@ next_move = {1: [6,8],
 
 """
 Given a current digit, return the possible next moves (in chess night L movement, from the 
-next_move table.
+next_move table above.
 """
 def fnext(d):
     return(next_move[d])
@@ -35,7 +35,7 @@ class newNode():
 
     """
     This method walks the binary tree and returns an order list, by level, left-right of the 
-    digits found for the initial parameters given (starting number, lock combination length)
+    digits found for the initial parameters given (starting number, lock_combination length)
     """
     def levelOrderWalk(self, tnode):
         if tnode is None:
@@ -52,7 +52,7 @@ class newNode():
         return [node.key for node in qnodes]
 
     """
-    This method walks each branch of the tree, from node to leaf, and returns all the possible
+    This method walks each branch of the tree, from tree root to leaf, and returns all the possible
     lock combinations.  For example:  ['2->7->2', '2->7->6', '2->9->4', '2->9->2']
                                 2
                                / \ 
@@ -101,7 +101,7 @@ def insertNode(tnode, key):
 This function builds the digit sequence (not including the first one) to be inserted into a binary
 tree.  The sequence corresponds to level-order, lef-right.  For example, for first_digit = 2
 and key_length = 3 the sequence returned is [7, 9, 2, 6, 4, 2].  We don't include the first digit,
-whic is 2. 
+which is 2 (the root of the tree). 
 """
 def buildDigitSequence(root, klength):
     dlist = [root]
